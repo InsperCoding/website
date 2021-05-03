@@ -1,13 +1,13 @@
 import DefaultOverlayContent from '../components/DefaultOverlayContent';
 import { Container } from './indexStyles';
-import { ModelsWrapper, ModelSection } from '../components/Model'
+import { ModelsWrapper, ModelSection, IndexModel } from '../components/Model'
 
 export default function Home() {
   return (
     <Container>
       <ModelsWrapper>
         <div>
-          <ModelSection
+          <IndexModel
             className="colored"
             modelName="Model One"
             overlayNode={
@@ -25,17 +25,6 @@ export default function Home() {
               <DefaultOverlayContent
                 label="Model Two"
                 description="Model 2"
-              />
-            }
-          />
-
-          <ModelSection
-            className="colored"
-            modelName="Model One"
-            overlayNode={
-              <DefaultOverlayContent
-                label="Model One"
-                description="Model 3"
               />
             }
           />
