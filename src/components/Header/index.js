@@ -1,5 +1,5 @@
 import React from 'react';
-// import { BurguerMenu } from '../BurguerMenu';
+import { BurguerMenu } from '../BurguerMenu';
 
 import { Container, Logo, Break, MiddleContent, Burguer } from './styles';
 
@@ -15,10 +15,10 @@ function Header() {
           <h1>Middle</h1>
         </MiddleContent>
 
-        <Burguer>
+        <BurguerMenu/>
+        {/* <Burguer>
           Burguer
-        </Burguer>
-        {/* <BurguerMenu/> */}
+        </Burguer> */}
       </Container>
       <Break/>
     </>

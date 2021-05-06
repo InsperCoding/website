@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
+  z-index: 0;
+  margin: 0 auto;
+  width: 80%;
   height: 75px;
   display: flex;
   align-items: center;
@@ -32,7 +34,7 @@ export const Burguer = styled.div`
 
 export const Break = styled.div`
   height: 1px;
-  width: 95%;
+  width: 80%;
   margin: 0 auto;
   background: var(--text100);
 `

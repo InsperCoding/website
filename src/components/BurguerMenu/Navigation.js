@@ -11,12 +11,45 @@ const variants = {
   }
 };
 
+const variants2 = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 }
+    }
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 }
+    }
+  }
+};
+
 export const Navigation = () => (
   <motion.ul variants={variants}>
-    {itemIds.map(i => (
-      <MenuItem i={i} key={i} />
-    ))}
+    <motion.li
+      variants={variants2}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      First
+    </motion.li>
+    <motion.li
+      variants={variants2}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      First
+    </motion.li>
+    <motion.li
+      variants={variants2}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      First
+    </motion.li>
   </motion.ul>
 );
-
-const itemIds = [0, 1, 2, 3, 4];

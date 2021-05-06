@@ -5,6 +5,8 @@ import { useDimensions } from "./use-dimensions";
 import { MenuToggle } from "./MenuToggle";
 import { Navigation } from "./Navigation";
 
+import { Container } from "./styles";
+
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
@@ -31,15 +33,17 @@ export const BurguerMenu = () => {
   const { height } = useDimensions(containerRef);
 
   return (
-    <motion.nav
-      initial={false}
-      animate={isOpen ? "open" : "closed"}
-      custom={height}
-      ref={containerRef}
-    >
-      <motion.div className="background" variants={sidebar} />
-      <Navigation />
-      <MenuToggle toggle={() => toggleOpen()} />
-    </motion.nav>
+    <Container>
+      <motion.nav
+        initial={false}
+        animate={isOpen ? "open" : "closed"}
+        custom={height}
+        ref={containerRef}
+      >
+        <motion.div className="background" variants={sidebar} />
+        <Navigation />
+        <MenuToggle toggle={() => toggleOpen()} />
+      </motion.nav>
+    </Container>
   );
 };
