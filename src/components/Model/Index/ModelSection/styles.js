@@ -8,6 +8,16 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  img{
+    max-width: 300px;
+  }
+
+  @media(max-width: 750px){
+    max-width: 330px;
+    justify-content: center;
+    flex-direction: column;
+  }
 `;
 
 export const Text = styled.div`

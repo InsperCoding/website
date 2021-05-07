@@ -7,4 +7,11 @@ export const Container = styled.div`
   
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+
+
+  @media(max-width: 750px){
+    justify-content: center;
+    max-width: 330px;
+    flex-direction: column;
+  }
 `;

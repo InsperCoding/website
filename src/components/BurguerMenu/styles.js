@@ -15,7 +15,7 @@ export const Container = styled.div`
     bottom: 0;
     right: 0;
     width: 300px;
-    background: #fff;
+    background: var(--white);
   }
 
   button {

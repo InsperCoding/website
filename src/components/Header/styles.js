@@ -9,6 +9,11 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+
+  @media(max-width: 500px){
+    max-width: 330px;
+  }
 `;
 
 export const Logo = styled.a`

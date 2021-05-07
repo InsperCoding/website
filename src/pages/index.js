@@ -1,6 +1,6 @@
 import DefaultOverlayContent from '../components/DefaultOverlayContent';
 import { Container } from '../styles/indexStyles';
-import { ModelsWrapper, ModelSection, IndexModel, ThirdPage } from '../components/Model'
+import { ModelsWrapper, ModelSection, IndexModel, ThirdPage } from '../components/Model/Index'
 
 export default function Home() {
   return (

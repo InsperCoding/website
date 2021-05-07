@@ -12,6 +12,14 @@ export const Container = styled.div`
   video{
     max-width: 300px;
     height: auto;
+    background: var(--background);
+    border-radius: 8px;
+  }
+
+  @media(max-width: 750px){
+    max-width: 330px;
+    justify-content: center;
+    flex-direction: column;
   }
 `;
 
