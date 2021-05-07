@@ -16,7 +16,9 @@ function ModelSection({ modelName, overlayNode, children, ...props }) {
           for the “track thumb”.
         </p>
       </Text>
-      <img src="/images/headphone.svg"/>
+      <video autoPlay muted loop>
+        <source src="/images/logo.mp4" type="video/mp4"/>
+      </video>
     </Container>
   );
 }

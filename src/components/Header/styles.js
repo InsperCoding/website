@@ -4,13 +4,14 @@ export const Container = styled.div`
   z-index: 0;
   margin: 0 auto;
   width: 80%;
+  max-width: 1440px;
   height: 75px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
-export const Logo = styled.h1`
+export const Logo = styled.a`
   font-size: 36px;
   font-weight: bold;
   color: var(--white);

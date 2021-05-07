@@ -1,24 +1,26 @@
 import React from 'react';
 import { BurguerMenu } from '../BurguerMenu';
 
-import { Container, Logo, Break, MiddleContent, Burguer } from './styles';
+import Link from 'next/link';
+import { Container, Logo, Break, MiddleContent } from './styles';
 
 function Header() {
   return (
     <>
       <Container>
-        <Logo>
-          InsperCoding
-          <span>.</span>
-        </Logo>
+        <Link href="/">
+          <Logo>
+            InsperCoding
+            <span>.</span>
+          </Logo>
+        </Link>
         <MiddleContent>
-          <h1>Middle</h1>
+          <Link href="/users">
+            <a>AI</a>
+          </Link>
         </MiddleContent>
 
         <BurguerMenu/>
-        {/* <Burguer>
-          Burguer
-        </Burguer> */}
       </Container>
       <Break/>
     </>

@@ -8,6 +8,11 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  video{
+    max-width: 300px;
+    height: auto;
+  }
 `;
 
 export const Text = styled.div`

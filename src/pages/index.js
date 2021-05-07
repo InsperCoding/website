@@ -1,6 +1,6 @@
 import DefaultOverlayContent from '../components/DefaultOverlayContent';
-import { Container } from './indexStyles';
-import { ModelsWrapper, ModelSection, IndexModel } from '../components/Model'
+import { Container } from '../styles/indexStyles';
+import { ModelsWrapper, ModelSection, IndexModel, ThirdPage } from '../components/Model'
 
 export default function Home() {
   return (
@@ -25,6 +25,17 @@ export default function Home() {
               <DefaultOverlayContent
                 label="Model Two"
                 description="Model 2"
+              />
+            }
+          />
+
+          <ThirdPage
+            className="colored"
+            modelName="Model Three"
+            overlayNode={
+              <DefaultOverlayContent
+                label="Model Three"
+                description="Model 3"
               />
             }
           />
