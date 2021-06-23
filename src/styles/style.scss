@@ -1,0 +1,7 @@
+// Importing Bulma from node_modules
+@import './variables.scss';
+@import '~bulma/bulma.sass';
+
+.childScroll{
+  scroll-snap-align: start;
+}

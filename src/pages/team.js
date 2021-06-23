@@ -1,24 +1,21 @@
-import DefaultOverlayContent from '../components/DefaultOverlayContent';
-import { Container } from '../styles/indexStyles';
-// import { ModelsWrapper, ModelSection, IndexModel, ThirdPage } from '../components/Model/Index'
+import { Container } from '../styles/scrollStyles';
 
 export default function Team() {
   return (
     <Container>
-      {/* <ModelsWrapper>
-        <div>
-          <ThirdPage
-            className="colored"
-            modelName="Model Three"
-            overlayNode={
-              <DefaultOverlayContent
-                label="Model Three"
-                description="Model 3"
-              />
-            }
-          />
-        </div>
-      </ModelsWrapper> */}
+      <section>
+        <img src='/images/AI.svg'/>
+        <img src='/images/headphone.svg'/>
+      </section>
+      <section>
+        <img src='/images/AI.svg'/>
+        <img src='/images/headphone.svg'/>
+      </section>
+
+      <section>
+        <img src='/images/AI.svg'/>
+        <img src='/images/headphone.svg'/>
+      </section>
     </Container>
   )
 }

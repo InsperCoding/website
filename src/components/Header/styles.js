@@ -10,7 +10,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
 
-
   @media(max-width: 500px){
     max-width: 330px;
   }

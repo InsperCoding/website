@@ -1,44 +1,24 @@
-import DefaultOverlayContent from '../components/DefaultOverlayContent';
-import { Container } from '../styles/indexStyles';
-import { ModelsWrapper, ModelSection, IndexModel, ThirdPage } from '../components/Model/Index'
-
-export default function Home() {
+import { Container, ModelsWrapper } from '../styles/scrollStyles';
+import { Flex, Text, Image } from '@chakra-ui/react';
+import Header from '../components/Header';
+export default function Index() {
   return (
     <Container>
       <ModelsWrapper>
         <div>
-          <IndexModel
-            className="colored"
-            modelName="Model One"
-            overlayNode={
-              <DefaultOverlayContent
-                label="Model One"
-                description="Model 1"
-              />
-            }
-          />
-
-          <ModelSection
-            className="colored"
-            modelName="Model Two"
-            overlayNode={
-              <DefaultOverlayContent
-                label="Model Two"
-                description="Model 2"
-              />
-            }
-          />
-
-          <ThirdPage
-            className="colored"
-            modelName="Model Three"
-            overlayNode={
-              <DefaultOverlayContent
-                label="Model Three"
-                description="Model 3"
-              />
-            }
-          />
+          <section>
+            <Flex align="center" justifyContent="center" direction="column">
+              <Text fontSize="6xl" mt="10">
+                Bem vindo ao Insper Coding
+              </Text>
+              <Image src="/images/logo.GIF"/>
+            </Flex>
+          </section>
+          <section>
+            <Flex align="center" justifyContent="center">
+              Welcome
+            </Flex>
+          </section>
         </div>
       </ModelsWrapper>
     </Container>

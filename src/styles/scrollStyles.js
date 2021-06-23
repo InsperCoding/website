@@ -1,13 +1,18 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  height: calc(100vh - 80px);
+export const Container = styled.div``;
 
-  scroll-snap-align: start;
+export const ModelsWrapper = styled.div`
+  height: 100vh;
   
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  
+  section{
+    height: 100vh;
 
+    scroll-snap-align: start;
+  }
 
   @media(max-width: 750px){
     justify-content: center;

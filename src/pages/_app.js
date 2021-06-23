@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 import Header from '../components/Header'
+import { ChakraProvider, Flex } from '@chakra-ui/react';
+import { theme } from '../styles/theme';
+import styles from '../styles/style.scss';
 
 const GlobalStyle = createGlobalStyle`
   :root{
@@ -25,10 +28,14 @@ const GlobalStyle = createGlobalStyle`
 `
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <ChakraProvider theme={theme}>
       <GlobalStyle />
-      <Header/>
-      <Component {...pageProps} />
-    </>
+      <Flex flex="1" direction="column" h="100vh" w="100vw" overflowY="hidden">
+        <Header/>
+        <div className={styles.childScroll}>
+          <Component {...pageProps}/>
+        </div>
+      </Flex>
+    </ChakraProvider> 
   )
 }
