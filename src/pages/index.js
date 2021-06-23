@@ -15,7 +15,7 @@ export default function Index() {
             </Flex>
           </section>
           <section>
-            <Flex align="center" justifyContent="center">
+            <Flex align="center" justifyContent="center" bg="gray.700" h="100vh">
               Welcome
             </Flex>
           </section>
