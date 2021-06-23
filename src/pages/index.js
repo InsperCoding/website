@@ -1,5 +1,5 @@
 import { Container, ModelsWrapper } from '../styles/scrollStyles';
-import { Flex, Text, Image } from '@chakra-ui/react';
+import { Flex, Text, Image, Button } from '@chakra-ui/react';
 import Header from '../components/Header';
 export default function Index() {
   return (
@@ -12,6 +12,10 @@ export default function Index() {
                 Bem vindo ao Insper Coding
               </Text>
               <Image src="/images/logo.GIF"/>
+              <Flex w="300px" alignItems="center" justifyContent="space-around">
+                <Button bgColor="gray.600" size="lg" borderRadius="50" colorScheme="gray">Get Started</Button>
+                <Button bgColor="gray.600" size="lg" borderRadius="50" colorScheme="gray">See more</Button>
+              </Flex>
             </Flex>
           </section>
           <section>
