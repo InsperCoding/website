@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BurguerMenu } from '../BurguerMenu';
 
 import Link from 'next/link';
@@ -6,6 +6,12 @@ import { Container, Logo, Break, MiddleContent } from './styles';
 import { Flex, Box, Button, Image } from '@chakra-ui/react';
 
 function Header() {
+  const [activeMenu, setActiveMenu] = useState(false);
+
+  function handleActiveMenu(){
+    setActiveMenu(!activeMenu);
+  }
+
   return (
     <Flex class="navbar mr-3" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
@@ -13,14 +19,14 @@ function Header() {
           <Image src="/images/logo.GIF" boxSize="100px" objectFit="cover"/>
         </a>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <a role="button" class={`navbar-burger ${activeMenu ? 'is-active' : ''}`} aria-label="menu" aria-expanded="false" onClick={handleActiveMenu}>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
+      <div id="navbarBasicExample" class={`navbar-menu ${activeMenu ? 'is-active' : ''}`}>
         <div class="navbar-start">
           <a class="navbar-item">
             Home
@@ -46,7 +52,7 @@ function Header() {
           </div>
         </div>
 
-        <div class="navbar-end">
+        {/* <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
               <a class="button is-primary">
@@ -57,7 +63,7 @@ function Header() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </Flex>
   );
